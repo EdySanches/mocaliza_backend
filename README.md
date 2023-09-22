@@ -1,2 +1,2 @@
 # mocaliza
-Serviço de aluguel de carros, em arquitetura MVC.
+Serviço de aluguel de veículos, em arquitetura MVC.
