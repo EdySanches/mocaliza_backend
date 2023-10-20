@@ -1,12 +1,16 @@
-import { model_base_c } from "./model_base"
+import { model_base_c, model_base_i } from "./model_base"
+
+interface model_category extends model_base_i {
+    name: string
+}
 
 export class category_c extends model_base_c {
 
     private name: string
 
-    constructor(id: number, name: string, active: boolean, updated_at: string, created_at: string) {
-        super(id, active, updated_at, created_at)
-        this.name = name
+    constructor(category: model_category) {
+        super(category)
+        this.name = category.name
     }
 
     set set_name(name){
@@ -17,8 +21,8 @@ export class category_c extends model_base_c {
         return this.name
     }
 
-    static from (id: number, name: string, active: boolean, updated_at: string, created_at: string) {
-        return new category_c(id, name, active, updated_at, created_at)
+    static from (category: model_category) {
+        return new category_c(category)
     }
 
 

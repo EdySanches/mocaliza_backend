@@ -1,7 +1,7 @@
-interface model_base_i {
+export interface model_base_i {
     id: number
-    created_at: any
-    updated_at: any
+    created_at: Date
+    updated_at: Date
     active: boolean
 }
 
@@ -9,8 +9,8 @@ export class model_base_c implements model_base_i  {
 
     private model_base: model_base_i
 
-    constructor (id: any, active: any, updated_at: any, created_at: any) {
-        this.model_base = {} as any
+    constructor ({id, active, updated_at, created_at}: model_base_i) {
+        this.model_base = {} as model_base_i
 
         this.model_base.id = parseInt(id)
         this.model_base.active = active
