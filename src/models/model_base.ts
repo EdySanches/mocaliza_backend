@@ -12,10 +12,10 @@ export class model_base_c implements model_base_i  {
     constructor ({id, active, updated_at, created_at}: model_base_i) {
         this.model_base = {} as model_base_i
 
-        this.model_base.id = parseInt(id)
+        this.model_base.id = id
         this.model_base.active = active
-        this.model_base.updated_at = updated_at ? updated_at : Date.now()
-        this.model_base.created_at = created_at ? created_at : Date.now()
+        this.model_base.updated_at = updated_at ? updated_at : new Date()
+        this.model_base.created_at = created_at ? created_at : new Date()
     }
 
     get id() {
@@ -35,7 +35,7 @@ export class model_base_c implements model_base_i  {
     }
 
     refresh() {
-        this.model_base.updated_at = Date.now()
+        this.model_base.updated_at = new Date()
     }
 
     is_active() {
