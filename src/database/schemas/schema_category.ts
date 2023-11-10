@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import { database_c } from "../database";
 
-export const Category = database_c.get_instance().sequelize.define('Category', {
+export default database_c.get_instance().sequelize.define('Categories', {
     name: {
         type: DataTypes.STRING,
         allowNull: false

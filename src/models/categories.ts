@@ -1,6 +1,6 @@
 import { model_base_c, model_base_i } from "./model_base"
 
-interface model_category extends model_base_i {
+interface model_categories extends model_base_i {
     name: string
 }
 
@@ -8,7 +8,7 @@ export class category_c extends model_base_c {
 
     private name: string
 
-    constructor(category: model_category) {
+    constructor(category: model_categories) {
         super(category)
         this.name = category.name
     }
@@ -21,7 +21,7 @@ export class category_c extends model_base_c {
         return this.name
     }
 
-    static from (category: model_category) {
+    static from (category: model_categories) {
         return new category_c(category)
     }
 
