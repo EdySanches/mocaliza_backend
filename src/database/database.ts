@@ -9,7 +9,7 @@ export class database_c {
         
         // this.database = new Sequelize('database_name', { host: 'localhost', dialect: driver, storage: 'memory'});
         this.database = new Sequelize({ database:'db_mocaliza', username:'dev', password: 'dev',
-                                         dialect: driver, storage: '::memory::',
+                                         dialect: driver, storage: './database/db_mocaliza.db',
                                          host: '127.0.0.1', port: 16000 })
     }
 

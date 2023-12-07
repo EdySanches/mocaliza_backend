@@ -1,14 +1,15 @@
 import Categories from '../database/schemas/schema_category'
 
-export class repository_categories {
+export class repository_categories_c {
     
     private db_instance
 
     constructor (){
         this.db_instance = Categories
+        console.log(this.db_instance)
     }
 
-    public async create(cat) {
+    public async create(cat: any) {
         const category = await this.db_instance.create(cat)
         return category
     } 
@@ -18,17 +19,17 @@ export class repository_categories {
         return category
     } 
 
-    public async readOne(cat) {
-        const category = await this.db_instance.find(cat)
+    public async readOne(cat: any) {
+        const category = await this.db_instance.findOne(cat)
         return category
     } 
 
-    public async update(cat) {
+    public async update(cat: any) {
         const category = await this.db_instance.update(cat, { where: { id: cat.id } })
         return category
     } 
     
-    public async delete(cat) {
+    public async delete(cat: any) {
         const category = await this.db_instance.destroy({ where: { id: cat.id } })
         return category
     } 

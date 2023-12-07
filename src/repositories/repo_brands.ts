@@ -10,7 +10,7 @@ export class repository_brands_c {
         this.db_instance = Brands
     }
 
-    public async create(br) {
+    public async create(br: any) {
         const brand = await this.db_instance.create(br)
         return brand
     } 
@@ -20,18 +20,18 @@ export class repository_brands_c {
         return brand
     } 
 
-    public async readOne(br) {
-        const brand = await this.db_instance.find(br)
+    public async readOne(id: number) {
+        const brand = await this.db_instance.findOne({ where: { id: id } })
         return brand
     } 
 
-    public async update(br) {
-        const brand = await this.db_instance.update(br, { where: { id: br.id } })
+    public async update(id: number, br: any) {
+        const brand = await this.db_instance.update(br, { where: { id: id } })
         return brand
     } 
     
-    public async delete(br) {
-        const brand = await this.db_instance.destroy({ where: { id: br.id } })
+    public async delete(id: number) {
+        const brand = await this.db_instance.destroy({ where: { id: id } })
         return brand
     } 
 }

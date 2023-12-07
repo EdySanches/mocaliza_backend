@@ -8,7 +8,8 @@ export default database_c.get_instance().sequelize.define('Brands', {
         type: DataTypes.INTEGER,
         allowNull: false,
         unique: true,
-        autoIncrement: true
+        autoIncrement: true,
+        primaryKey: true
     },
     
     name: {
