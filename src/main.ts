@@ -5,6 +5,7 @@ import { repository_categories_c } from './repositories/repo_category'
 
 const app = express()
 
+// NOTE CRUD de categories
 app.get('/categories', async (req: Request, res: Response) => {
 
 	let retorno
@@ -54,7 +55,7 @@ app.delete('/categories', async (req: Request, res: Response) => {
 	})
 })
 
-// TODO desenvolver crud de brands
+// NOTE CRUD de brands
 app.get('/brands', async (req: Request, res: Response) => {
 
 	let retorno

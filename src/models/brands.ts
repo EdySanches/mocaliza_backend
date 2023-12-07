@@ -1,4 +1,3 @@
-// TODO testar
 import { model_base_c, model_base_i } from "./model_base"
 
 interface model_brands extends model_base_i {

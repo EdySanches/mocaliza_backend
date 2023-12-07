@@ -1,5 +1,3 @@
-// TODO testar
-
 import Brands from '../database/schemas/schema_brands'
 
 export class repository_brands_c {

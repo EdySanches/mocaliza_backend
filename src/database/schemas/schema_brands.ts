@@ -1,5 +1,3 @@
-// TODO testar
-
 import { DataTypes } from "sequelize";
 import { database_c } from "../database";
 
